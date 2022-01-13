@@ -1,0 +1,9 @@
+#!/bin/bash
+DATABASE="test"
+DB_USER_ID="${MG_CRM_DB_USER}"
+DB_PASSWORD="${MG_CRM_DB_PASSWORD}"
+BACKUP_FILE_NAME=backup-$(date +%d-%m-%Y).sql
+BACKUP_PATH="${HOME}/backups/${BACKUP_FILE_NAME}"
+SERVER_HOST="${SERVER_IP}"
+
+ssh -p 222 root@$SERVER_HOST mysqldump -u "$DB_USER_ID" -p"$DB_PASSWORD" -e $DATABASE > $BACKUP_PATH
