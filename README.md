@@ -1,7 +1,7 @@
 # Configuration
 
-- Edit `sudo vim ~/.bashrc`
 - Edit the `backup.bash` file and add the database name 
+- Edit `sudo vim ~/.bashrc`
 - Add the below configuration in the file 
 
 ```shell
